@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+        :root {
+            --primary-blue: #0A1931;
+            --accent-gold: #F5A623;
+            --accent-orange: #E67E22;
+            --text-gray: #4A4A4A;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #0A1931 0%, #162C4E 100%);
+        }
+
+        .gold-underline {
+            position: relative;
+        }
+
+        .gold-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-gold);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-gold);
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        /* View Management */
+        .page-view {
+            display: none;
+        }
+
+        .page-view.active {
+            display: block;
+        }
+
+        /* Hide scrollbar but keep functionality */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Modal Styles */
+        #portfolio-modal {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        #portfolio-modal.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        /* Custom width for 3 cards per view on desktop */
+        .solution-card {
+            flex: 0 0 100%;
+            /* Mobile: 1 card */
+        }
+
+        @media (min-width: 768px) {
+            .solution-card {
+                flex: 0 0 calc((100% - 3rem) / 3);
+                /* Desktop: Exactly 3 cards with gaps */
+            }
+        }

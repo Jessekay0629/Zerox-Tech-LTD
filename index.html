@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zerox Technology | Industrial Fluid & Water Tank Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-[#0A1931]/95 backdrop-blur-sm text-white shadow-lg transition-all duration-300 py-6 md:py-8"
+        id="main-nav">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center space-x-2 cursor-pointer" onclick="switchPage('home')">
+                <svg width="45" height="45" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="45" fill="#0A1931" />
+                    <path d="M30 30 L70 30 L70 45 L55 45 L55 70 L40 70 L40 45 L30 45 Z" fill="white" />
+                    <path d="M30 30 L45 30 L45 55 L30 75 Z" fill="#F5A623" />
+                </svg>
+                <div class="flex flex-col">
+                    <span class="text-2xl font-bold tracking-tighter leading-none">ZEROX</span>
+                    <span class="text-[11px] tracking-[0.2em] font-semibold text-orange-400">TECHNOLOGY</span>
+                </div>
+            </div>
+
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a onclick="switchPage('home')" class="nav-link transition">Home</a>
+                <a onclick="switchPage('home', '#about')" class="nav-link transition text-white">About</a>
+                <a onclick="switchPage('home', '#products')" class="nav-link transition text-white">Products</a>
+                <a onclick="switchPage('portfolio')" class="nav-link transition text-[#F5A623]">Our Works</a>
+                <a onclick="switchPage('home', '#contact')" class="nav-link transition text-white">Contact</a>
+            </div>
+
+            <div class="hidden md:block">
+                <a href="tel:+260958589885"
+                    class="bg-[#F5A623] hover:bg-[#E67E22] text-[#0A1931] font-bold py-3 px-8 rounded-md transition duration-300 shadow-lg shadow-orange-500/20">
+                    Call Now
+                </a>
+            </div>
+
+            <button class="md:hidden" onclick="toggleMenu()">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-[#0A1931] px-6 py-4 border-t border-gray-700">
+            <div class="flex flex-col space-y-4">
+                <a onclick="switchPage('home')" class="py-2 border-b border-gray-800">Home</a>
+                <a onclick="switchPage('home', '#about')" class="py-2 border-b border-gray-800">About</a>
+                <a onclick="switchPage('home', '#products')" class="py-2 border-b border-gray-800">Products</a>
+                <a onclick="switchPage('portfolio')" class="py-2 border-b border-gray-800">Our Works</a>
+                <a onclick="switchPage('home', '#contact')" class="py-2 border-b border-gray-800">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HOME PAGE VIEW -->
+    <main id="view-home" class="page-view active">
+        <!-- Hero Section -->
+        <section id="home" class="hero-gradient pt-40 pb-20 md:pt-56 md:pb-40 text-white overflow-hidden">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative z-10">
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+                        Commercial <br>
+                        <span class="text-[#F5A623]">Fluid & Water Tanks</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-lg">
+                        Zerox offers some of the best galvanized steel & stainless water tanks available on the market
+                        today. Engineered for durability and customization.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#products"
+                            class="bg-[#F5A623] hover:bg-[#E67E22] text-[#0A1931] text-center font-bold py-4 px-8 rounded-md shadow-lg transition transform hover:scale-105">
+                            View Our Tanks
+                        </a>
+                        <a href="#contact"
+                            class="border-2 border-white hover:bg-white hover:text-[#0A1931] text-center font-bold py-4 px-8 rounded-md transition">
+                            Get a Quote
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="relative rounded-xl overflow-hidden shadow-2xl border-4 border-[#F5A623]/20">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000"
+                            alt="Industrial Tank" class="w-full h-auto grayscale-[20%]">
+                        <div class="absolute inset-0 bg-blue-900/10"></div>
+                    </div>
+                    <div class="absolute -top-6 -right-6 text-[#F5A623] opacity-50">
+                        <i data-lucide="plus" size="48"></i>
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 text-[#F5A623] opacity-50">
+                        <div class="w-8 h-8 rounded-full border-4 border-[#F5A623]"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="p-8 bg-gray-50 rounded-xl card-hover border-b-4 border-[#F5A623]">
+                        <div class="text-[#0A1931] mb-4">
+                            <i data-lucide="settings" size="40"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Engineering Design</h3>
+                        <p class="text-gray-600">Built to withstand environmental pressures with precision structural
+                            engineering.</p>
+                    </div>
+                    <div class="p-8 bg-gray-50 rounded-xl card-hover border-b-4 border-[#F5A623]">
+                        <div class="text-[#0A1931] mb-4">
+                            <i data-lucide="maximize" size="40"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Volume Capacity</h3>
+                        <p class="text-gray-600">Flexible sizing options ranging from small units to massive commercial
+                            reservoirs.</p>
+                    </div>
+                    <div class="p-8 bg-gray-50 rounded-xl card-hover border-b-4 border-[#F5A623]">
+                        <div class="text-[#0A1931] mb-4">
+                            <i data-lucide="award" size="40"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Certified Support</h3>
+                        <p class="text-gray-600">Full certification compliance and dedicated company support for every
+                            project.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-stretch gap-16">
+                    <div class="md:w-1/2 flex flex-col justify-center">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-8 gold-underline">The Zerox Advantage</h2>
+                        <p class="text-gray-700 leading-relaxed mb-6">
+                            At Zerox Technology, we specialize in providing high-grade galvanized steel and stainless
+                            water tanks. Our mission is to provide industry-leading fluid storage solutions that are not
+                            only durable but also cost-effective and highly customizable.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed mb-8">
+                            Our tanks make top choices among commercial and industrial players in terms of their
+                            engineering design, volume capacity, customization ability, certification, and ongoing
+                            company support.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-center space-x-3">
+                                <i data-lucide="check-circle" class="text-green-600"></i>
+                                <span>Galvanized Steel Panels</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i data-lucide="check-circle" class="text-green-600"></i>
+                                <span>Stainless Steel Options Available</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i data-lucide="check-circle" class="text-green-600"></i>
+                                <span>Modular Bolt-Together Construction</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2">
+                        <div
+                            class="h-full min-h-[450px] w-full rounded-2xl overflow-hidden shadow-2xl border-2 border-white">
+                            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&q=80&w=1200"
+                                alt="Worksite" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1. OUR STORAGE SOLUTIONS -->
+        <section id="products" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6 mb-12 flex flex-col md:flex-row justify-between items-end">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-[#0A1931]">Our Storage Solutions</h2>
+                    <p class="text-gray-600 max-w-2xl">High-performance tanks designed for agriculture, fire protection,
+                        and industrial processing.</p>
+                </div>
+                <div class="hidden md:flex space-x-2 mt-6 md:mt-0">
+                    <button
+                        onclick="document.getElementById('scroll-container').scrollBy({left: -600, behavior: 'smooth'})"
+                        class="p-3 rounded-full bg-white shadow-sm border border-gray-100 hover:bg-[#F5A623] hover:text-white transition">
+                        <i data-lucide="chevron-left" size="20"></i>
+                    </button>
+                    <button
+                        onclick="document.getElementById('scroll-container').scrollBy({left: 600, behavior: 'smooth'})"
+                        class="p-3 rounded-full bg-white shadow-sm border border-gray-100 hover:bg-[#F5A623] hover:text-white transition">
+                        <i data-lucide="chevron-right" size="20"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Scrollable container -->
+            <div class="container mx-auto px-6">
+                <div id="scroll-container" class="overflow-x-auto no-scrollbar snap-x snap-mandatory pb-4">
+                    <div id="solutions-grid-home" class="flex gap-6">
+                        <!-- JS will inject product cards here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. FEATURED PROJECTS -->
+        <section id="portfolio" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-[#0A1931]">Featured Projects</h2>
+                        <p class="text-gray-600">Explore some of our recently completed work across the region.</p>
+                    </div>
+                    <button onclick="switchPage('portfolio')"
+                        class="mt-6 md:mt-0 flex items-center bg-[#0A1931] text-white px-6 py-3 rounded-lg font-bold hover:bg-[#F5A623] hover:text-[#0A1931] transition group">
+                        See All Works <i data-lucide="arrow-right"
+                            class="ml-2 group-hover:translate-x-1 transition"></i>
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 h-full md:h-[600px]">
+                    <div onclick="openModal(0)"
+                        class="md:col-span-2 group cursor-pointer relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all h-[350px] md:h-full card-hover">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-[#0A1931] via-transparent to-transparent opacity-80">
+                        </div>
+                        <div class="absolute bottom-8 left-8 text-white">
+                            <h4 class="text-2xl font-bold mb-2">Municipal Water Reservoir</h4>
+                            <div class="flex items-center text-[#F5A623] font-medium">
+                                <i data-lucide="map-pin" size="16" class="mr-2"></i>
+                                Lusaka, Zambia
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-1 flex flex-col gap-6 h-full">
+                        <div onclick="openModal(1)"
+                            class="flex-1 group cursor-pointer relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all h-[250px] md:h-1/2 card-hover">
+                            <img src="https://images.unsplash.com/photo-1542332213-9b5a5a3fad35?auto=format&fit=crop&q=80&w=800"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-[#0A1931] via-transparent to-transparent opacity-70">
+                            </div>
+                            <div class="absolute bottom-6 left-6 text-white">
+                                <h4 class="text-lg font-bold">Industrial Fire Storage</h4>
+                                <p class="text-sm text-gray-300">Kitwe Copperbelt</p>
+                            </div>
+                        </div>
+
+                        <div onclick="openModal(2)"
+                            class="flex-1 group cursor-pointer relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all h-[250px] md:h-1/2 card-hover">
+                            <img src="https://images.unsplash.com/photo-1516937941184-75139597e80a?auto=format&fit=crop&q=80&w=800"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-[#0A1931] via-transparent to-transparent opacity-70">
+                            </div>
+                            <div class="absolute bottom-6 left-6 text-white">
+                                <h4 class="text-lg font-bold">Agricultural Fluid Tank</h4>
+                                <p class="text-sm text-gray-300">Mazabuka Estates</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Restored Contact Section -->
+        <section id="contact" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="bg-[#0A1931] text-white rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
+                    <div class="md:w-2/5 p-12 bg-[#0d2242]">
+                        <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+                        <p class="text-gray-400 mb-8">Ready to start your project? Get in touch with our engineering
+                            team today.</p>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <i data-lucide="phone" class="text-[#F5A623]"></i>
+                                <div>
+                                    <p class="font-bold">Phone</p>
+                                    <a href="tel:+260958589885" class="text-gray-300 hover:text-white transition">+260
+                                        958 589 885</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <i data-lucide="mail" class="text-[#F5A623]"></i>
+                                <div>
+                                    <p class="font-bold">Email</p>
+                                    <p class="text-gray-300">sales@zeroxtechnology.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <i data-lucide="share-2" class="text-[#F5A623]"></i>
+                                <div class="flex space-x-4 mt-2">
+                                    <a href="#" class="p-2 bg-white/10 rounded-full hover:bg-[#F5A623] transition"><i
+                                            data-lucide="facebook" size="18"></i></a>
+                                    <a href="#" class="p-2 bg-white/10 rounded-full hover:bg-[#F5A623] transition"><i
+                                            data-lucide="twitter" size="18"></i></a>
+                                    <a href="#" class="p-2 bg-white/10 rounded-full hover:bg-[#F5A623] transition"><i
+                                            data-lucide="instagram" size="18"></i></a>
+                                    <a href="#" class="p-2 bg-white/10 rounded-full hover:bg-[#F5A623] transition"><i
+                                            data-lucide="linkedin" size="18"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:w-3/5 p-12">
+                        <form class="space-y-6"
+                            onsubmit="event.preventDefault(); alert('Message sent! Our team will contact you shortly.');">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-400 mb-2">Name</label>
+                                    <input type="text"
+                                        class="w-full bg-white/5 border border-white/10 rounded-md py-3 px-4 focus:border-[#F5A623] outline-none transition text-white"
+                                        placeholder="Your Name">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-400 mb-2">Email</label>
+                                    <input type="email"
+                                        class="w-full bg-white/5 border border-white/10 rounded-md py-3 px-4 focus:border-[#F5A623] outline-none transition text-white"
+                                        placeholder="Your Email">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-400 mb-2">Tank Type</label>
+                                <select
+                                    class="w-full bg-white/5 border border-white/10 rounded-md py-3 px-4 focus:border-[#F5A623] outline-none transition text-gray-400">
+                                    <option>Galvanized Steel</option>
+                                    <option>Stainless Steel</option>
+                                    <option>Industrial Fluid</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-400 mb-2">Message</label>
+                                <textarea rows="4"
+                                    class="w-full bg-white/5 border border-white/10 rounded-md py-3 px-4 focus:border-[#F5A623] outline-none transition text-white"
+                                    placeholder="Tell us about your requirements"></textarea>
+                            </div>
+                            <button type="submit"
+                                class="w-full bg-[#F5A623] hover:bg-[#E67E22] text-[#0A1931] font-bold py-4 rounded-md shadow-lg transition duration-300">
+                                Send Request
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- PORTFOLIO PAGE VIEW -->
+    <main id="view-portfolio" class="page-view pt-24 bg-gray-50 min-h-screen">
+        <section class="py-16">
+            <div class="container mx-auto px-6">
+                <div class="flex items-center space-x-2 text-sm text-gray-500 mb-8">
+                    <span onclick="switchPage('home')" class="cursor-pointer hover:text-[#0A1931]">Home</span>
+                    <i data-lucide="chevron-right" size="14"></i>
+                    <span class="text-[#0A1931] font-bold">Our Works</span>
+                </div>
+
+                <h1 class="text-4xl md:text-5xl font-extrabold text-[#0A1931] mb-6 tracking-tight">Project Portfolio
+                </h1>
+                <p class="text-lg text-gray-600 max-w-2xl mb-12">Showcasing our precision engineering across the region.
+                </p>
+
+                <div id="full-project-grid" class="grid md:grid-cols-3 gap-8">
+                    <!-- JS will inject ALL works here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- PRODUCT DETAIL VIEW -->
+    <main id="view-product" class="page-view pt-24 bg-white min-h-screen">
+        <div id="product-content">
+            <!-- Dynamic Content Injected by JS -->
+        </div>
+    </main>
+
+    <!-- FINAL UNIFIED FOOTER -->
+    <footer class="bg-gray-900 text-white pt-16 pb-4 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 items-stretch">
+                <!-- Column 1: Brand -->
+                <div
+                    class="flex flex-col space-y-6 bg-[#0A1931] p-8 rounded-2xl border border-white/10 h-full shadow-xl shadow-black/20 transition hover:border-white/20">
+                    <div class="flex items-center space-x-3">
+                        <svg width="45" height="45" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="45" fill="#0A1931" />
+                            <path d="M30 30 L70 30 L70 45 L55 45 L55 70 L40 70 L40 45 L30 45 Z" fill="white" />
+                            <path d="M30 30 L45 30 L45 55 L30 75 Z" fill="#F5A623" />
+                        </svg>
+                        <div class="flex flex-col">
+                            <span class="text-xl font-bold tracking-tighter leading-none text-white">ZEROX</span>
+                            <span class="text-[10px] tracking-[0.2em] font-semibold text-orange-400">TECHNOLOGY</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed border-t border-white/10 pt-4">
+                        Delivering industry-leading galvanized steel and stainless storage solutions since inception.
+                        Professionalism in every drop.
+                    </p>
+                </div>
+
+                <!-- Column 2: Working Hours -->
+                <div
+                    class="flex flex-col space-y-4 bg-[#0A1931] p-8 rounded-2xl border border-white/10 h-full shadow-xl shadow-black/20 transition hover:border-white/20">
+                    <h4 class="text-lg font-bold text-[#F5A623] border-b border-white/10 pb-3">Working Hours</h4>
+                    <div class="space-y-3 text-sm text-gray-400 flex-grow pt-2">
+                        <div class="flex justify-between border-b border-white/5 pb-2">
+                            <span>Mon - Fri:</span>
+                            <span class="text-white font-medium">08:00 - 17:00</span>
+                        </div>
+                        <div class="flex justify-between border-b border-white/5 pb-2">
+                            <span>Saturday:</span>
+                            <span class="text-white font-medium">09:00 - 13:00</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Sunday:</span>
+                            <span class="text-[#F5A623] font-bold uppercase tracking-wider">Closed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 3: Company Resources -->
+                <div
+                    class="flex flex-col space-y-6 bg-[#0A1931] p-8 rounded-2xl border border-[#F5A623]/30 h-full shadow-xl shadow-orange-500/5 transition hover:border-[#F5A623]/60">
+                    <h4 class="text-lg font-bold text-white border-b border-white/10 pb-3">Company Resources</h4>
+
+                    <div class="flex items-start space-x-3 text-sm text-gray-300">
+                        <i data-lucide="map-pin" class="text-[#F5A623] shrink-0 mt-1" size="20"></i>
+                        <p class="leading-relaxed">Plot 452, Heavy Industrial Area, Lusaka, Zambia</p>
+                    </div>
+
+                    <a href="https://drive.google.com/file/d/1PlaceholderLink/view" target="_blank"
+                        class="flex items-center justify-center space-x-3 bg-[#F5A623] text-[#0A1931] hover:bg-white py-4 px-6 rounded-xl transition duration-300 font-bold group shadow-lg shadow-[#F5A623]/20">
+                        <i data-lucide="eye" class="group-hover:scale-110 transition"></i>
+                        <span>View Company Profile</span>
+                    </a>
+
+                    <div class="flex space-x-4 justify-center md:justify-start pt-4 border-t border-white/5">
+                        <a href="#" class="text-gray-500 hover:text-[#F5A623] transition"><i data-lucide="facebook"
+                                size="20"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-[#F5A623] transition"><i data-lucide="linkedin"
+                                size="20"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-[#F5A623] transition"><i data-lucide="instagram"
+                                size="20"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-6 border-t border-gray-800 text-center text-[13px] text-gray-600">
+                &copy; 2026 Zerox Technology. All Rights Reserved. Built for Industrial Excellence.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Portfolio Modal Carousel -->
+    <div id="portfolio-modal" class="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4">
+        <button onclick="closeModal()" class="absolute top-6 right-6 text-white hover:text-[#F5A623] transition">
+            <i data-lucide="x" size="40"></i>
+        </button>
+        <div class="relative w-full max-w-6xl flex items-center">
+            <button onclick="prevSlide()"
+                class="absolute -left-4 md:-left-16 z-10 text-white/50 hover:text-white transition">
+                <i data-lucide="chevron-left" size="64"></i>
+            </button>
+            <div class="w-full flex flex-col items-center">
+                <div class="relative h-[60vh] md:h-[75vh] w-full flex items-center justify-center">
+                    <img id="modal-img" src="" class="max-w-full max-h-full object-contain rounded-lg">
+                </div>
+                <div class="mt-8 text-center bg-white/5 p-6 rounded-xl backdrop-blur-sm w-full max-w-2xl">
+                    <h3 id="modal-title" class="text-white text-3xl font-bold mb-2"></h3>
+                    <div class="flex items-center justify-center text-[#F5A623] font-semibold">
+                        <i data-lucide="map-pin" size="18" class="mr-2"></i>
+                        <span id="modal-location"></span>
+                    </div>
+                </div>
+            </div>
+            <button onclick="nextSlide()"
+                class="absolute -right-4 md:-right-16 z-10 text-white/50 hover:text-white transition">
+                <i data-lucide="chevron-right" size="64"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
