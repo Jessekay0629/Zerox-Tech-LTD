@@ -61,22 +61,21 @@
 
     <!-- HOME PAGE VIEW -->
     <main id="view-home" class="page-view active">
-        <!-- Hero Section -->
-        <section id="home" class="hero-gradient pt-40 pb-20 md:pt-56 md:pb-40 text-white overflow-hidden">
+        <!-- Hero Carousel Section -->
+        <section id="home" class="hero-gradient pt-40 pb-20 md:pt-56 md:pb-40 text-white overflow-hidden relative">
             <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
                 <div class="relative z-10">
                     <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
-                        Commercial <br>
-                        <span class="text-[#F5A623]">Fluid & Water Tanks</span>
+                        <span id="hero-static-text" class="hero-fade-text"></span><br>
+                        <span id="hero-typewriter" class="text-[#F5A623] typewriter-text"></span>
+                        <span class="typewriter-cursor">|</span>
                     </h1>
-                    <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-lg">
-                        Zerox offers some of the best galvanized steel & stainless water tanks available on the market
-                        today. Engineered for durability and customization.
+                    <p id="hero-subtext" class="text-lg md:text-xl text-gray-300 mb-8 max-w-lg hero-fade-text">
                     </p>
                     <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                         <a href="#products"
                             class="bg-[#F5A623] hover:bg-[#E67E22] text-[#0A1931] text-center font-bold py-4 px-8 rounded-md shadow-lg transition transform hover:scale-105">
-                            View Our Tanks
+                            View Our Services
                         </a>
                         <a href="#contact"
                             class="border-2 border-white hover:bg-white hover:text-[#0A1931] text-center font-bold py-4 px-8 rounded-md transition">
@@ -86,8 +85,8 @@
                 </div>
                 <div class="relative">
                     <div class="relative rounded-xl overflow-hidden shadow-2xl border-4 border-[#F5A623]/20">
-                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000"
-                            alt="Industrial Tank" class="w-full h-auto grayscale-[20%]">
+                        <img id="hero-image" src="" alt="Zerox Services"
+                            class="w-full h-auto object-cover hero-fade-image">
                         <div class="absolute inset-0 bg-blue-900/10"></div>
                     </div>
                     <div class="absolute -top-6 -right-6 text-[#F5A623] opacity-50">
@@ -97,6 +96,16 @@
                         <div class="w-8 h-8 rounded-full border-4 border-[#F5A623]"></div>
                     </div>
                 </div>
+            </div>
+
+            <!-- Dot Indicators -->
+            <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-3 z-10" id="hero-dots">
+                <button onclick="goToHeroSlide(0)"
+                    class="hero-dot w-3 h-3 rounded-full bg-white/30 transition-all duration-300 hover:bg-white/60"></button>
+                <button onclick="goToHeroSlide(1)"
+                    class="hero-dot w-3 h-3 rounded-full bg-white/30 transition-all duration-300 hover:bg-white/60"></button>
+                <button onclick="goToHeroSlide(2)"
+                    class="hero-dot w-3 h-3 rounded-full bg-white/30 transition-all duration-300 hover:bg-white/60"></button>
             </div>
         </section>
 
@@ -137,50 +146,51 @@
             <div class="container mx-auto px-6">
                 <div class="flex flex-col md:flex-row items-stretch gap-16">
                     <div class="md:w-1/2 flex flex-col justify-center">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-8 gold-underline">The Zerox Advantage</h2>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-8 gold-underline">About Zerox Technology</h2>
                         <p class="text-gray-700 leading-relaxed mb-6">
-                            At Zerox Technology, we specialize in providing high-grade galvanized steel and stainless
-                            water tanks. Our mission is to provide industry-leading fluid storage solutions that are not
-                            only durable but also cost-effective and highly customizable.
+                            At Zerox Technology, we provide engineering and construction solutions across the
+                            construction and mining industries, specializing in bulk storage tank construction, civil
+                            engineering, and general supply services.
+                            Fully registered and compliant with all regulatory bodies, we are known for reliable
+                            delivery and precision on large-scale industrial projects.
                         </p>
                         <p class="text-gray-700 leading-relaxed mb-8">
-                            Our tanks make top choices among commercial and industrial players in terms of their
-                            engineering design, volume capacity, customization ability, certification, and ongoing
-                            company support.
+                            Operating from Lusaka and Solwezi, Zerox serves clients across Zambia by delivering
+                            cost-effective, turnkey solutions backed by skilled expertise, modern equipment, strict
+                            safety compliance, and internationally recognized quality standards.
                         </p>
                         <ul class="space-y-4">
                             <li class="flex items-center space-x-3">
                                 <i data-lucide="check-circle" class="text-green-600"></i>
-                                <span>Galvanized Steel Panels</span>
+                                <span>Fluid & Water Tank Construction</span>
                             </li>
                             <li class="flex items-center space-x-3">
                                 <i data-lucide="check-circle" class="text-green-600"></i>
-                                <span>Stainless Steel Options Available</span>
+                                <span>Civil Engineering Works</span>
                             </li>
                             <li class="flex items-center space-x-3">
                                 <i data-lucide="check-circle" class="text-green-600"></i>
-                                <span>Modular Bolt-Together Construction</span>
+                                <span>Construction & Mining Supply</span>
                             </li>
                         </ul>
                     </div>
                     <div class="md:w-1/2">
                         <div
                             class="h-full min-h-[450px] w-full rounded-2xl overflow-hidden shadow-2xl border-2 border-white">
-                            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000"
-                                alt="Worksite" class="w-full h-full object-cover">
+                            <img src="./images/about-us.jpeg" alt="Worksite" class="w-full h-full object-cover">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 1. OUR STORAGE SOLUTIONS -->
+        <!-- 1. OFFERED SERVICES -->
         <section id="products" class="py-20 bg-gray-50">
             <div class="container mx-auto px-6 mb-12 flex flex-col md:flex-row justify-between items-end">
                 <div>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-[#0A1931]">Our Storage Solutions</h2>
-                    <p class="text-gray-600 max-w-2xl">High-performance tanks designed for agriculture, fire protection,
-                        and industrial processing.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-[#0A1931]">Our Offered Services</h2>
+                    <p class="text-gray-600 max-w-2xl">Comprehensive solutions across tank construction, civil
+                        engineering, and industrial supply.</p>
                 </div>
                 <div class="hidden md:flex space-x-2 mt-6 md:mt-0">
                     <button
@@ -221,48 +231,24 @@
                     </button>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 h-full md:h-[600px]">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:h-[600px] overflow-hidden">
                     <div onclick="openModal(0)"
                         class="md:col-span-2 group cursor-pointer relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all h-[350px] md:h-full card-hover">
-                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200"
+                        <img src="images/hr-tnk.png"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-[#0A1931] via-transparent to-transparent opacity-80">
-                        </div>
-                        <div class="absolute bottom-8 left-8 text-white">
-                            <h4 class="text-2xl font-bold mb-2">Municipal Water Reservoir</h4>
-                            <div class="flex items-center text-[#F5A623] font-medium">
-                                <i data-lucide="map-pin" size="16" class="mr-2"></i>
-                                Lusaka, Zambia
-                            </div>
-                        </div>
                     </div>
 
-                    <div class="md:col-span-1 flex flex-col gap-6 h-full">
+                    <div class="md:col-span-1 flex flex-col gap-6 h-[516px] md:h-full overflow-hidden">
                         <div onclick="openModal(1)"
-                            class="flex-1 group cursor-pointer relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all h-[250px] md:h-1/2 card-hover">
-                            <img src="https://images.unsplash.com/photo-1542332213-9b5a5a3fad35?auto=format&fit=crop&q=80&w=800"
+                            class="flex-1 group cursor-pointer relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all card-hover">
+                            <img src="images/13.jpeg"
                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-[#0A1931] via-transparent to-transparent opacity-70">
-                            </div>
-                            <div class="absolute bottom-6 left-6 text-white">
-                                <h4 class="text-lg font-bold">Industrial Fire Storage</h4>
-                                <p class="text-sm text-gray-300">Kitwe Copperbelt</p>
-                            </div>
                         </div>
 
                         <div onclick="openModal(2)"
-                            class="flex-1 group cursor-pointer relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all h-[250px] md:h-1/2 card-hover">
-                            <img src="https://images.unsplash.com/photo-1574689049868-e94ed5301745?auto=format&fit=crop&q=80&w=1200"
+                            class="flex-1 group cursor-pointer relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all card-hover">
+                            <img src="images/hero-con.png"
                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-[#0A1931] via-transparent to-transparent opacity-70">
-                            </div>
-                            <div class="absolute bottom-6 left-6 text-white">
-                                <h4 class="text-lg font-bold">Agricultural Fluid Tank</h4>
-                                <p class="text-sm text-gray-300">Mazabuka Estates</p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -283,8 +269,8 @@
                                 <i data-lucide="phone" class="text-[#F5A623]"></i>
                                 <div>
                                     <p class="font-bold">Phone</p>
-                                    <a href="tel:+260958589885" class="text-gray-300 hover:text-white transition">+260
-                                        965933111</a>
+                                    <a href="tel:+260958589885"
+                                        class="text-gray-300 hover:text-white transition">+260-958-589885</a>
                                 </div>
                             </div>
                             <div class="flex items-start space-x-4">
@@ -328,12 +314,12 @@
                                 </div>
                             </div>
                             <div>
-                                <label class="block text-sm font-medium text-gray-400 mb-2">Tank Type</label>
+                                <label class="block text-sm font-medium text-gray-400 mb-2">Service Type</label>
                                 <select
                                     class="w-full bg-white/5 border border-white/10 rounded-md py-3 px-4 focus:border-[#F5A623] outline-none transition text-gray-400">
-                                    <option>Galvanized Steel</option>
-                                    <option>Stainless Steel</option>
-                                    <option>Industrial Fluid</option>
+                                    <option>Fluid & Water Tanks</option>
+                                    <option>Civil Engineering Works</option>
+                                    <option>Construction & Mining Supply</option>
                                     <option>Other</option>
                                 </select>
                             </div>
@@ -383,11 +369,69 @@
         </div>
     </main>
 
+    <!-- Past Clients Section -->
+    <section class="client-section">
+
+        <div class="logo-carousel">
+            <div class="logo-container">
+                <!-- First set of logos -->
+                <div class="client-logo">
+                    <img src="images/logos/cec.png" alt="Client 2">
+                </div>
+                <div class="client-logo">
+                    <img src="images/logos/onesight.png" alt="Client 2">
+                </div>
+                <div class="client-logo">
+                    <img src="images/logos/taifa.png" alt="Client 4">
+                </div>
+                <div class="client-logo">
+                    <img src="images/logos/pembe.jpg" alt="Client 2">
+                </div>
+                <div class="client-logo">
+                    <img src="images/logos/bwino.png" alt="Client 2">
+                </div>
+                <div class="client-logo">
+                    <img src="images/logos/Coca-Cola.png" alt="Client 2">
+                </div>
+                <div class="client-logo">
+                    <img src="images/logos/moi.png" alt="Client 2">
+                </div>
+                <div class="client-logo">
+                    <img src="images/logos/army.png" alt="Client 2">
+                </div>
+
+
+                <!-- Duplicate logos for continuous scrolling effect -->
+                <div class="client-logo">
+                    <img src="images/logos/cec.png" alt="Client 1">
+                </div>
+                <div class="client-logo">
+                    <img src="images/logos/onesight.png" alt="Client 2">
+                </div>
+                <div class="client-logo">
+                    <img src="images/logos/taifa.png" alt="Client 2">
+                </div>
+                <div class="client-logo">
+                    <img src="images/logos/pembe.jpg" alt="Client 4">
+                </div>
+                <div class="client-logo">
+                    <img src="images/logos/bwino.png" alt="Client 2">
+                </div>
+                <div class="client-logo">
+                    <img src="images/logos/moi.png" alt="Client 2">
+                </div>
+                <div class="client-logo">
+                    <img src="images/logos/army.png" alt="Client 2">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- FINAL UNIFIED FOOTER -->
     <footer class="bg-gray-900 text-white pt-16 pb-4 border-t border-gray-800">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 items-stretch">
-                <!-- Column 1: Brand -->
+                <!-- Column 1: Brand + Socials -->
                 <div
                     class="flex flex-col space-y-6 bg-[#0A1931] p-8 rounded-2xl border border-white/10 h-full shadow-xl shadow-black/20 transition hover:border-white/20">
                     <div class="flex items-center space-x-3">
@@ -405,9 +449,17 @@
                         Delivering industry-leading galvanized steel and stainless storage solutions since inception.
                         Professionalism in every drop.
                     </p>
+                    <div class="flex space-x-4 justify-center md:justify-start pt-2 border-t border-white/5">
+                        <a href="#" class="text-gray-500 hover:text-[#F5A623] transition"><i data-lucide="facebook"
+                                size="20"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-[#F5A623] transition"><i data-lucide="linkedin"
+                                size="20"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-[#F5A623] transition"><i data-lucide="instagram"
+                                size="20"></i></a>
+                    </div>
                 </div>
 
-                <!-- Column 2: Working Hours -->
+                <!-- Column 2: Working Hours + Company Profile -->
                 <div
                     class="flex flex-col space-y-4 bg-[#0A1931] p-8 rounded-2xl border border-white/10 h-full shadow-xl shadow-black/20 transition hover:border-white/20">
                     <h4 class="text-lg font-bold text-[#F5A623] border-b border-white/10 pb-3">Working Hours</h4>
@@ -425,31 +477,35 @@
                             <span class="text-[#F5A623] font-bold uppercase tracking-wider">Closed</span>
                         </div>
                     </div>
-                </div>
-
-                <!-- Column 3: Company Resources -->
-                <div
-                    class="flex flex-col space-y-6 bg-[#0A1931] p-8 rounded-2xl border border-[#F5A623]/30 h-full shadow-xl shadow-orange-500/5 transition hover:border-[#F5A623]/60">
-                    <h4 class="text-lg font-bold text-white border-b border-white/10 pb-3">Company Resources</h4>
-
-                    <div class="flex items-start space-x-3 text-sm text-gray-300">
-                        <i data-lucide="map-pin" class="text-[#F5A623] shrink-0 mt-1" size="20"></i>
-                        <p class="leading-relaxed">Plot 452, Heavy Industrial Area, Lusaka, Zambia</p>
-                    </div>
-
-                    <a href="https://drive.google.com/file/d/1PlaceholderLink/view" target="_blank"
-                        class="flex items-center justify-center space-x-3 bg-[#F5A623] text-[#0A1931] hover:bg-white py-4 px-6 rounded-xl transition duration-300 font-bold group shadow-lg shadow-[#F5A623]/20">
+                    <a href="https://drive.google.com/file/d/1PkfRrrG070O3XhbKEMDiJTPHtystUpXN/view?usp=drivesdk"
+                        target="_blank"
+                        class="flex items-center justify-center space-x-3 bg-[#F5A623] text-[#0A1931] hover:bg-white py-4 px-6 rounded-xl transition duration-300 font-bold group shadow-lg shadow-[#F5A623]/20 mt-auto">
                         <i data-lucide="eye" class="group-hover:scale-110 transition"></i>
                         <span>View Company Profile</span>
                     </a>
+                </div>
 
-                    <div class="flex space-x-4 justify-center md:justify-start pt-4 border-t border-white/5">
-                        <a href="#" class="text-gray-500 hover:text-[#F5A623] transition"><i data-lucide="facebook"
-                                size="20"></i></a>
-                        <a href="#" class="text-gray-500 hover:text-[#F5A623] transition"><i data-lucide="linkedin"
-                                size="20"></i></a>
-                        <a href="#" class="text-gray-500 hover:text-[#F5A623] transition"><i data-lucide="instagram"
-                                size="20"></i></a>
+                <!-- Column 3: Our Locations -->
+                <div
+                    class="flex flex-col space-y-6 bg-[#0A1931] p-8 rounded-2xl border border-[#F5A623]/30 h-full shadow-xl shadow-orange-500/5 transition hover:border-[#F5A623]/60">
+                    <h4 class="text-lg font-bold text-white border-b border-white/10 pb-3">Our Locations</h4>
+                    <div class="space-y-4 flex-grow">
+                        <div class="flex items-start space-x-3 text-sm text-gray-300">
+                            <i data-lucide="map-pin" class="text-[#F5A623] shrink-0 mt-1" size="20"></i>
+                            <div>
+                                <p class="text-white font-semibold text-xs uppercase tracking-wider mb-1">Sales Office
+                                </p>
+                                <p class="leading-relaxed">27 Muramba Road, Chilenge,<br>Lusaka, Republic of Zambia</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3 text-sm text-gray-300">
+                            <i data-lucide="building-2" class="text-[#F5A623] shrink-0 mt-1" size="20"></i>
+                            <div>
+                                <p class="text-white font-semibold text-xs uppercase tracking-wider mb-1">Workshop</p>
+                                <p class="leading-relaxed">192 Musshitala, Kansanshi Mine Road,<br>Solwezi, Republic of
+                                    Zambia</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -460,29 +516,22 @@
         </div>
     </footer>
 
-    <!-- Portfolio Modal Carousel -->
+    <!-- Image Gallery Modal -->
     <div id="portfolio-modal" class="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4">
         <button onclick="closeModal()" class="absolute top-6 right-6 text-white hover:text-[#F5A623] transition">
             <i data-lucide="x" size="40"></i>
         </button>
         <div class="relative w-full max-w-6xl flex items-center">
-            <button onclick="prevSlide()"
+            <button id="modal-prev" onclick="prevSlide()"
                 class="absolute -left-4 md:-left-16 z-10 text-white/50 hover:text-white transition">
                 <i data-lucide="chevron-left" size="64"></i>
             </button>
             <div class="w-full flex flex-col items-center">
-                <div class="relative h-[60vh] md:h-[75vh] w-full flex items-center justify-center">
+                <div class="relative h-[70vh] md:h-[85vh] w-full flex items-center justify-center">
                     <img id="modal-img" src="" class="max-w-full max-h-full object-contain rounded-lg">
                 </div>
-                <div class="mt-8 text-center bg-white/5 p-6 rounded-xl backdrop-blur-sm w-full max-w-2xl">
-                    <h3 id="modal-title" class="text-white text-3xl font-bold mb-2"></h3>
-                    <div class="flex items-center justify-center text-[#F5A623] font-semibold">
-                        <i data-lucide="map-pin" size="18" class="mr-2"></i>
-                        <span id="modal-location"></span>
-                    </div>
-                </div>
             </div>
-            <button onclick="nextSlide()"
+            <button id="modal-next" onclick="nextSlide()"
                 class="absolute -right-4 md:-right-16 z-10 text-white/50 hover:text-white transition">
                 <i data-lucide="chevron-right" size="64"></i>
             </button>
@@ -490,6 +539,14 @@
     </div>
 
     <script src="js/script.js"></script>
+    <script async src='https://d2mpatx37cqexb.cloudfront.net/delightchat-whatsapp-widget/embeds/embed.min.js'></script>
+    <script>
+        var wa_btnSetting = { "btnColor": "#16BE45", "ctaText": "", "cornerRadius": 40, "marginBottom": 20, "marginLeft": 20, "marginRight": 20, "btnPosition": "right", "whatsAppNumber": "260958589885", "welcomeMessage": "Hello", "zIndex": 999999, "btnColorScheme": "light" };
+        window.onload = () => {
+            _waEmbed(wa_btnSetting);
+        };
+    </script>
+
 </body>
 
 </html>
