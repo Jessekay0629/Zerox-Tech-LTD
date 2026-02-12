@@ -4,30 +4,30 @@ const products = [
         name: 'Fluid & Water Tanks',
         tag: 'Storage',
         image: './images/S1.png',
-        shortDesc: 'High-grade galvanized and stainless steel tanks engineered for durability and rapid on-site assembly.',
-        longDesc: 'Zerox Technology specializes in high-grade galvanized steel and stainless water tanks designed for industrial, commercial, and agricultural use. Our modular bolt-together construction allows for rapid on-site assembly, with options ranging from sectional steel panels to premium stainless steel and dedicated fire water storage systems. Every tank is engineered for durability, customization, and long-term performance.',
-        features: ['Design & Fabrication of Steel Storage Tanks', 'Erection & Installation of Above-Ground Tanks', 'Pipeline Connection & Integration', 'Non-Destructive Testing (NDT) & Pressure Testing', 'Tank Rehabilitation, Maintenance & Upgrades'],
-        applications: ['Industrial and mining water storage', 'Agricultural and irrigation systems', 'Commercial facilities', 'Residential estates', 'Schools, hospitals, and public institutions', 'Emergency and backup water supply']
+        shortDesc: 'Pressed steel tanks, HDG water tanks, and modular steel tanks engineered for commercial water storage and rapid on-site assembly across Zambia.',
+        longDesc: 'Zerox Technology is Zambia\'s trusted manufacturer of pressed steel tanks, galvanized steel tanks, and HDG water tanks for industrial, commercial, municipal, and agricultural use. Our modular steel tanks feature bolt-together construction for rapid on-site assembly, with options including sectional steel panels, Abeco steel tanks, premium stainless steel, and dedicated fire water storage systems. From heavy duty steel tanks for mining water storage to commercial water storage for residential estates — every tank is engineered for durability, customization, and long-term performance.',
+        features: ['Design & Fabrication of Pressed Steel Tanks', 'HDG & Galvanized Steel Tank Manufacturing', 'Erection & Installation of Above-Ground Tanks', 'Modular Steel Tank Assembly', 'Pipeline Connection & Integration', 'Non-Destructive Testing (NDT) & Pressure Testing', 'Tank Rehabilitation, Maintenance & Upgrades'],
+        applications: ['Municipal water tanks for councils & utilities', 'Mining water tanks & industrial storage', 'Commercial water storage for facilities', 'Agricultural and irrigation systems', 'Schools, hospitals, and public institutions', 'Emergency and backup water supply', 'Residential estates & housing developments']
     },
     {
         id: 'civil-engineering',
         name: 'Civil Engineering Works',
         tag: 'Engineering',
         image: './images/hero-min.png',
-        shortDesc: 'End-to-end infrastructure solutions from foundations and roads to drainage and structural steelworks.',
-        longDesc: 'Our Civil Engineering division delivers end-to-end infrastructure solutions — from laying strong, durable reinforced concrete foundations to constructing access and internal roads. We design and install drainage systems and culverts to manage stormwater and protect infrastructure, perform comprehensive site preparation and earthworks, and fabricate structural steelworks and platforms for tanks, machinery, and industrial buildings.',
-        features: ['Foundations & Structural Concrete Works', 'Drainage Systems & Culverts', 'Road Construction', 'Site Preparation & Earthworks', 'Structural Steelworks & Platform Construction'],
-        applications: ['Industrial and mining water storage', 'Agricultural and irrigation systems', 'Commercial facilities', 'Residential estates', 'Schools, hospitals, and public institutions', 'Emergency and backup water supply']
+        shortDesc: 'Steel fabrication, structural steelworks, tank installation services, and commercial & industrial construction across Zambia.',
+        longDesc: 'Our Civil Engineering division delivers end-to-end infrastructure and steel fabrication solutions across Zambia. We specialize in structural steel fabrication, steel tank erection, and tank installation services — from laying strong, durable reinforced concrete foundations to constructing access and internal roads. Our commercial construction and industrial construction capabilities include drainage systems and culverts, comprehensive site preparation and earthworks, and fabrication of structural steelworks and platforms for tanks, machinery, and industrial buildings.',
+        features: ['Steel Fabrication & Structural Steelworks', 'Steel Tank Erection & Installation Services', 'Foundations & Structural Concrete Works', 'Drainage Systems & Culverts', 'Road Construction', 'Site Preparation & Earthworks', 'Platform Construction for Tanks & Machinery'],
+        applications: ['Commercial construction projects', 'Industrial construction & mining infrastructure', 'Tank installation & steel tank erection', 'Agricultural and irrigation systems', 'Residential estates', 'Schools, hospitals, and public institutions']
     },
     {
         id: 'general-supply',
         name: 'Construction & Mining Supply',
         tag: 'Supply',
         image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1200',
-        shortDesc: 'Reliable procurement of mining equipment, construction materials, PPE, and industrial tools.',
-        longDesc: 'Zerox provides reliable procurement and supply of essential materials for the construction and mining industries. From mining machinery and electrical fittings to plumbing components, certified PPE, and bulk construction materials like cement, steel, and aggregates — we ensure your project site stays fully stocked and operational with quality-assured products.',
-        features: ['Mining Supplies & Equipment', 'Electrical Materials & Fittings', 'Plumbing & Water System Components', 'PPE & Safety Gear', 'Tools & Mechanical Components', 'Construction Materials'],
-        applications: ['Industrial and mining water storage', 'Agricultural and irrigation systems', 'Commercial facilities', 'Residential estates', 'Schools, hospitals, and public institutions', 'Emergency and backup water supply']
+        shortDesc: 'Mining water tanks, fuel storage tanks, diesel storage tanks, fuel bowsers, water bowsers, PPE, and heavy duty industrial equipment across Zambia.',
+        longDesc: 'Zerox provides reliable procurement and supply of essential materials for the construction and mining industries across Zambia. Our mining supply range includes mining water tanks, fuel storage tanks, diesel storage tanks, fuel bowsers, water bowsers, and tank stands for mining equipment. We also supply heavy duty steel tanks, electrical fittings, plumbing components, certified PPE, and bulk construction materials like cement, steel, and aggregates — ensuring your project site stays fully stocked and operational.',
+        features: ['Mining Water Tanks & Heavy Duty Steel Tanks', 'Fuel Storage Tanks & Diesel Storage Tanks', 'Fuel Bowsers & Water Bowsers', 'Tank Stands for Mining Equipment', 'Electrical Materials & Fittings', 'PPE & Safety Gear', 'Construction Materials & Aggregates'],
+        applications: ['Mining water storage & fuel storage', 'Fuel & diesel tank installations', 'Commercial & industrial facilities', 'Construction site supply', 'Agricultural operations', 'Institutional & public infrastructure']
     }
 ];
 
@@ -57,20 +57,20 @@ let currentProjectIndex = 0;
 const heroSlides = [
     {
         staticText: 'Commercial',
-        typedText: 'Fluid & Water Tanks',
-        subtext: 'High-grade galvanized steel and stainless water tanks engineered for durability, customization, and industry-leading performance.',
+        typedText: 'Pressed Steel & Water Tanks',
+        subtext: 'Galvanized steel tanks, HDG water tanks, and modular steel tanks — engineered for municipal, commercial, and industrial water storage across Zambia.',
         image: 'images/hr-tnk.png'
     },
     {
         staticText: 'Professional',
-        typedText: 'Civil Engineering Works',
-        subtext: 'From foundations and structural concrete to roads, drainage systems, and steelworks — we build the infrastructure that powers industry.',
-        image: 'images/hero-con.png'
+        typedText: 'Steel Fabrication & Construction',
+        subtext: 'Structural steel fabrication, tank installation services, and commercial & industrial construction — from foundations to steel tank erection in Lusaka and beyond.',
+        image: 'images/hero-m.png'
     },
     {
         staticText: 'Reliable',
-        typedText: 'Construction & Mining Supply',
-        subtext: 'Your trusted source for mining equipment, construction materials, electrical fittings, plumbing components, PPE, and industrial tools.',
+        typedText: 'Mining & Fuel Storage',
+        subtext: 'Mining water tanks, fuel storage tanks, diesel storage tanks, fuel bowsers, and water bowsers — heavy duty steel tanks built for Zambia\'s mining sector.',
         image: 'images/tes.png'
     }
 ];
@@ -181,6 +181,7 @@ function switchPage(pageId, extra = null) {
     }
     window.scrollTo(0, 0);
     document.getElementById('mobile-menu').classList.remove('active');
+    lucide.createIcons();
 }
 
 function renderProductPage(id) {
