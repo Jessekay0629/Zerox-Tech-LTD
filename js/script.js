@@ -59,19 +59,19 @@ const heroSlides = [
         staticText: 'Commercial',
         typedText: 'Pressed Steel & Water Tanks',
         subtext: 'Galvanized steel tanks, HDG water tanks, and modular steel tanks — engineered for municipal, commercial, and industrial water storage across Zambia.',
-        image: 'images/hr-tnk.png'
+        image: 'images/h-1.jpeg'
     },
     {
         staticText: 'Professional',
         typedText: 'Steel Fabrication & Construction',
         subtext: 'Structural steel fabrication, tank installation services, and commercial & industrial construction — from foundations to steel tank erection in Lusaka and beyond.',
-        image: 'images/hero-m.png'
+        image: 'images/h-2.png'
     },
     {
         staticText: 'Reliable',
         typedText: 'Mining & Fuel Storage',
         subtext: 'Mining water tanks, fuel storage tanks, diesel storage tanks, fuel bowsers, and water bowsers — heavy duty steel tanks built for Zambia\'s mining sector.',
-        image: 'images/tes.png'
+        image: 'images/h-3.png'
     }
 ];
 
@@ -235,7 +235,7 @@ function renderProductPage(id) {
                                 <h2 class="text-3xl font-bold mb-4">Request Specs & Pricing</h2>
                                 <p class="text-gray-400 mb-8 max-w-xl mx-auto">Our engineering team is ready to help you find the perfect configuration for your specific fluid storage needs.</p>
                                 <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
-                                    <a href="tel:+260958589885" class="bg-[#F5A623] text-[#0A1931] font-bold py-4 px-10 rounded-xl hover:bg-white transition">Call Our Engineers</a>
+                                    <a href="tel:+260965933111" class="bg-[#F5A623] text-[#0A1931] font-bold py-4 px-10 rounded-xl hover:bg-white transition">Call Our Engineers</a>
                                     <button onclick="switchPage('home', '#contact')" class="border-2 border-white text-white font-bold py-4 px-10 rounded-xl hover:bg-white hover:text-[#0A1931] transition">Get a Digital Quote</button>
                                 </div>
                             </div>
